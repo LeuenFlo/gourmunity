@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Lulo One";
+  src: url("https://db.onlinewebfonts.com/t/e3d79050a148e9b4af7521c6cfa994da.eot");
+  src: url("https://db.onlinewebfonts.com/t/e3d79050a148e9b4af7521c6cfa994da.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/e3d79050a148e9b4af7521c6cfa994da.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/e3d79050a148e9b4af7521c6cfa994da.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/e3d79050a148e9b4af7521c6cfa994da.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/e3d79050a148e9b4af7521c6cfa994da.svg#Lulo One")format("svg");
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lulo One", sans-serif;
+  /*font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;*/
+  text-align: center;
+  background-size: cover;
+  font-size: 1em;
+}
+
+hr {
+  border-top: 1px solid rgb(0 0 0 / 60%);
+}
+
+header img {
+  width: 13em;
+  padding: 1em;
+  border-bottom-style: #0e110d;
+}
+
+header {
+  /*background-color: #0e110d;*/
+
+  align-items: center;
+  transition-duration: 0.3s;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Horizontale Zentrierung */
+  align-items: center; /* Vertikale Zentrierung */
+}
+
+nav a {
+  margin: 1.8em;
+  transition-duration: 0.1s;
+  font-size: 0.9em;
+}
+
+nav #contact_link {
+  border: 2px solid black;
+  padding: 1em;
+}
+nav a:focus, nav a:visited, nav a:link, nav a:active {
+  text-decoration: none;
+  color: black;
+}
+nav a:hover {
+  color: rgb(52, 52, 52);
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+main {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.section {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  width: 1000px; /*60%;*/
+  margin: auto;
+}
+
+#title {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+#title div {
+  /*background-color: #0e110d;
+  color: #E7AD35;*/
+  width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#intro {
+  
+}
+
+.blured {
+  background: rgba( 255, 255, 255, 0.45 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10.5px );
+  -webkit-backdrop-filter: blur( 10.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+#reviews {
+  padding-top: 0;
+  background-color: #f5f0e6;
+}
+
+#gallery {
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+#offers {
+  /*color: #F1AE2C;*/
+}
+
+#offers div {
+  padding: 1em;
+}
+
+#offers_buttons p {
+  margin: 0;
+  padding: 1em;
+}
+
+#offer_content {
+  margin-top: 1em;
+}
+
+#offer_content div {
+  padding-left: 4em;
+}
+
+.custom_button {
+  width: 90%;
+}
+
+.custom_button:hover {
+  border: 1px solid grey;
+}
+
+
+
+#about {
+
+}
+
+
+ul li {
+  margin-top: 1em;
+}
+
+footer {
+  padding-top: 5em;
+  margin: auto;
+}
+
+#social_media {
+  padding-top: 3em;
+  padding-bottom: 5em;
+  max-width: 15em;
+  margin: 0 auto;
+}
+
+#social_media img {
+  width: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
