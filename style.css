@@ -8,8 +8,6 @@
   url("https://db.onlinewebfonts.com/t/e3d79050a148e9b4af7521c6cfa994da.svg#Lulo One")format("svg");
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -95,10 +93,6 @@ main {
   margin-right: auto;
 }
 
-#intro {
-  
-}
-
 .blured {
   background: rgba( 255, 255, 255, 0.45 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -108,23 +102,18 @@ main {
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-
 #reviews {
   padding-top: 0;
   background-color: #f5f0e6;
 }
 
-#gallery {
+#gallery_item {
   background-color: white;
   padding-top: 2em;
   padding-bottom: 2em;
   padding-left: 1em;
   padding-right: 1em;
-}
-
-
-#offers {
-  /*color: #F1AE2C;*/
+  margin-bottom: 6em;
 }
 
 #offers div {
@@ -135,7 +124,6 @@ main {
   margin: 0;
   padding: 1em;
 }
-
 #offer_content {
   margin-top: 1em;
 }
@@ -146,18 +134,68 @@ main {
 
 .custom_button {
   width: 90%;
+  cursor: pointer;
+  transition: border 0.2s ease;
 }
 
 .custom_button:hover {
   border: 1px solid grey;
 }
 
-
-
-#about {
-
+.custom_button.active {
+  border: 1px solid grey;
 }
 
+#contact {
+  background-color: #f5f0e6;
+}
+
+#contact div {
+  background-color: white;
+}
+
+form {
+  margin: auto;
+  margin-top: 5em;
+}
+
+form input {
+  margin-bottom: 3em;
+}
+
+input, textarea {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+}
+
+input:focus, textarea:focus {
+  border-bottom-color: #333;
+}
+
+
+button {
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 1em;
+}
+
+button:hover {
+  background-color: #555;
+}
 
 ul li {
   margin-top: 1em;
@@ -178,25 +216,3 @@ footer {
 #social_media img {
   width: 3em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

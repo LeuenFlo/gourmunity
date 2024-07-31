@@ -10,14 +10,11 @@ HostPoint:
 Mail:	gourmunity.catering@gmail.com
 PW: 	1997_Patrice1
 
-
-
 Aufwand:
 - Erstes coden + Struktur: 3h
 - Telefon mit Elio und Recherche über Wordpress und Hostpoint (Abklärung der Kosten): 1h
 - Weiterarbeit Foster + Angebote: 3h
 - morgen Freitag 2h
-
 
 https://www.frieschampion.ch/
 
