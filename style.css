@@ -19,7 +19,6 @@ body {
   /*font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;*/
   text-align: center;
   background-size: cover;
-  font-size: 1em;
 }
 
 hr {
@@ -46,12 +45,12 @@ nav {
   display: flex;
   justify-content: center; /* Horizontale Zentrierung */
   align-items: center; /* Vertikale Zentrierung */
+  transition: 0.5s;
 }
 
 nav a {
   margin: 1.8em;
   transition-duration: 0.1s;
-  font-size: 0.9em;
 }
 
 nav #contact_link {
@@ -107,13 +106,27 @@ main {
   background-color: #f5f0e6;
 }
 
-#gallery_item {
+.gallery_item {
+  position: relative;
   background-color: white;
   padding-top: 2em;
   padding-bottom: 2em;
   padding-left: 1em;
   padding-right: 1em;
-  margin-bottom: 6em;
+  text-align: left;
+  height: 35em;
+}
+
+.gallery_item img {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.right.carousel-control, .left.carousel-control {
+  background: none;
 }
 
 #offers div {
@@ -164,7 +177,6 @@ form input {
 }
 
 input, textarea {
-  font-size: 1rem;
   padding: 0.5rem 0;
   margin-bottom: 1rem;
   border: none;
@@ -181,7 +193,6 @@ input::placeholder, textarea::placeholder {
 input:focus, textarea:focus {
   border-bottom-color: #333;
 }
-
 
 button {
   border: none;
@@ -215,4 +226,64 @@ footer {
 
 #social_media img {
   width: 3em;
+}
+
+#menu_button {
+  color: white;
+  position: fixed;
+  cursor: pointer;
+  visibility: hidden;
+  height: 4em;
+  width: 4em;
+  padding: 0.4em;
+  left: 1em;
+  top: 1em;
+  color: black;
+  background-color: rgba(255,255,255,.8);
+  border-radius: 0 100% 100% 0;
+  transition-duration: 0.45s;
+}
+
+@media only screen and (max-width: 1250px) {
+
+  #title div {
+    width: auto;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    /*background-color: #ffb82f;*/
+    background-color: #f5f0e6;
+    position: fixed;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    margin: 0;
+    padding: 5em;
+    top: -100vh;
+  }
+
+  #offers {
+    padding-top: 0;
+  }
+
+  nav a {
+    margin: 1.8em;
+  }
+
+  #menu_button {
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+
+  .section {
+    width: 90%;
+  }
 }

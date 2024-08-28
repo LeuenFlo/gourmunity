@@ -39,3 +39,48 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         });
     this.reset()
 });
+
+
+// navigation
+let isOpen = false;
+function toggleNav() {
+  if (isOpen) {
+    closeNav();
+  }
+  else {
+    openNav();
+  }
+}
+
+function openNav() {
+  if (isOpen) return;
+  document.getElementsByTagName("nav")[0].style.top = "0";
+  let btn = document.getElementById("menu_button");
+  btn.style.left = "-5em";
+  isOpen = true;
+  console.log(btn.classList);
+}
+
+function closeNav() {
+  if (!isOpen) return;
+  document.getElementsByTagName("nav")[0].style.top = "-100vh";
+  let btn = document.getElementById("menu_button");
+  btn.style.left = "0";
+  btn.src = "burger.png";
+  isOpen = false;
+  console.log(btn.classList);
+}
+
+// alle a-Tags holen
+const allLinks = document.getElementsByTagName('a');
+
+// EventListener zu jedem a-Tag hinzufügen
+for (let i = 0; i < allLinks.length; i++) {
+  allLinks[i].addEventListener('click', function(event) {
+    closeNav();
+  });
+}
+
+window.onscroll = function() {
+  closeNav();
+};

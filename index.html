@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gourmunity</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script
     type="text/javascript"
@@ -16,6 +15,10 @@
       publicKey: "a3uOiUzM40dCfsMus",
     });
   </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -28,6 +31,7 @@
     <a href="#impressions">Impressionen</a>
     <a href="#contact" id="contact_link">Kontakt</a>
   </nav>
+  <img src="images/burger.png" alt="" id="menu_button" onclick="toggleNav()">
 </header>
 <main id="title">
   <div class="section">
@@ -37,14 +41,13 @@
     </p>
   </div>
 </main>
-<main id="intro"></main>
 <main id="offers">
   <div class="section blured">
     <div>
       <h2>Unsere Angebote</h2>
     </div>
     <div>
-      <div class="container text-center" style="height: 32em;">
+      <div class="customContainer text-center" style="height: 32em;">
         <div class="row" id="offers_buttons">
           <div class="col custom_button active" data-target="basic">
             <p>Basic</p>
@@ -109,27 +112,67 @@
   </div>
 </main>
 <main id="reviews">
-<div class="section">
-  <h2 style="margin-bottom: 3em;">Rezensionen</h2>
-  <div id="gallery_item" class="row">
-    <div class="col">
-      <img src="images/img_1.jpg" style="width: 100%;">
+<div class="container">
+  <h2 style="margin: 2em;">Rezensionen</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="gallery_item row">
+          <div class="col">
+            <img src="carousel_img/1.jpeg">
+          </div>
+          <div class="col">
+            <h3>Super Service</h3>
+            <p>Mir kommen die folgenden Worte in den Sinn: Unkompliziert, Rasch, Hilfsbereit, Kompetent, Professionell, Gute Qualität, Faire Preise. Ich habe Herrn Bracher als sehr hilfsbereiten, unkomplizierten und professionellen Geschäftspartner kennen gelernt . Das Buffet war sehr schön hergerichtet, die Qualität der Speisen und Getränke war hervorragend und das alles in einem sehr fairen Preis-Leistungs-Verhältnis.</p>
+            <p style="color: gold;">Dominique Emery Freléchoz</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="gallery_item row">
+          <div class="col">
+            <img src="carousel_img/2.jpeg">
+          </div>
+          <div class="col">
+            <h3>Hammer Food!</h3>
+            <p>Sehr gutes und vielseitiges Angebot an Warm- und Kaltspeisen. Freundlicher und zuverlässiger Service. Es bereitet Freude, sich am Buffet bedienen zu können. Beste Empfehlung!</p>
+            <p style="color: gold;">A.G.</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item">
+        <div class="gallery_item row">
+          <div class="col">
+            <img src="carousel_img/3.jpeg">
+          </div>
+          <div class="col">
+            <h3>Perfektes Catering</h3>
+            <p>Gourmunity übernahm das Catering für unser Firmen-Weihnachtsessen 2023 für ca. 50 Personen. Gourmunity steht für Leidenschaft und Professionalität, ist Symbol für höchste Qualität, Frische und Liebe zum Detail.</p>
+            <p style="color: gold;">Unbekannt</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col" style="text-align: left;">
-      <h5>Super Service</h5>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      <p style="color: gold;">Otto Normalverbraucher</p>
-    </div>
-  </div>
-  <div id="gallery_item" class="row">
-    <div class="col" style="text-align: left;">
-      <h5>Hammer Food!</h5>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-      <p style="color: gold;">Max Mustermann</p>
-    </div>
-    <div class="col">
-      <img src="images/img_2.jpg" style="width: 100%;">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </div>
 </main>
@@ -175,17 +218,14 @@
   </div>
 </div>
 <hr>
-<div class="container">
-  <div id="social_media" class="container">
+<div class="customContainer">
+  <div id="social_media" class="customContainer">
     <div class="row">
-      <a class="col-md-4" target="_blank" href="https://www.instagram.com/gourmunity/">
+      <a class="col-md-6" target="_blank" href="https://www.instagram.com/gourmunity/">
         <img src="social_media/insta.svg">
       </a>
-      <a class="col-md-4" target="_blank" href="https://wa.me/+41798525930">
+      <a class="col-md-6" target="_blank" href="https://wa.me/+41798525930">
         <img src="social_media/whatsapp.svg">
-      </a>
-      <a class="col-md-4" href="#">
-        <img src="social_media/linked_in.svg">
       </a>
     </div>
   </div>

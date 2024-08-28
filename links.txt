@@ -8,7 +8,7 @@ PW:		1997_Patrice1
 
 HostPoint:
 Mail:	gourmunity.catering@gmail.com
-PW: 	1997_Patrice1
+PW: 	1997_Patrice1%
 
 Aufwand:
 - Erstes coden + Struktur: 3h
@@ -21,4 +21,3 @@ https://www.frieschampion.ch/
 https://mideast.tours/
 
 incile
-
