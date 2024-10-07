@@ -92,6 +92,11 @@ main {
   margin-right: auto;
 }
 
+#intro div {
+  padding: 2em;
+  text-align: justify;
+}
+
 .blured {
   background: rgba( 255, 255, 255, 0.45 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -114,11 +119,12 @@ main {
   padding-left: 1em;
   padding-right: 1em;
   text-align: left;
-  height: 35em;
+  height: 38em;
 }
 
 .gallery_item img {
-  width: 90%;
+  max-height: 95%;
+  max-width: 85%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -127,36 +133,6 @@ main {
 
 .right.carousel-control, .left.carousel-control {
   background: none;
-}
-
-#offers div {
-  padding: 1em;
-}
-
-#offers_buttons p {
-  margin: 0;
-  padding: 1em;
-}
-#offer_content {
-  margin-top: 1em;
-}
-
-#offer_content div {
-  padding-left: 4em;
-}
-
-.custom_button {
-  width: 90%;
-  cursor: pointer;
-  transition: border 0.2s ease;
-}
-
-.custom_button:hover {
-  border: 1px solid grey;
-}
-
-.custom_button.active {
-  border: 1px solid grey;
 }
 
 #contact {
