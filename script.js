@@ -63,10 +63,10 @@ function openNav() {
 
 function closeNav() {
   if (!isOpen) return;
-  document.getElementsByTagName("nav")[0].style.top = "-100vh";
+  document.getElementsByTagName("nav")[0].style.top = "-200vh";
   let btn = document.getElementById("menu_button");
   btn.style.left = "0";
-  btn.src = "burger.png";
+  btn.src = "images/burger.png";
   isOpen = false;
   console.log(btn.classList);
 }

@@ -80,7 +80,7 @@ main {
 }
 
 #title {
-  padding-top: 10em;
+  padding-top: 5em;
   padding-bottom: 10em;
 }
 
@@ -135,6 +135,10 @@ main {
   background: none;
 }
 
+.carousel-indicators {
+  visibility: hidden;
+}
+
 #contact {
   background-color: #f5f0e6;
 }
@@ -146,6 +150,8 @@ main {
 form {
   margin: auto;
   margin-top: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 form input {
@@ -218,6 +224,22 @@ footer {
   background-color: rgba(255,255,255,.8);
   border-radius: 0 100% 100% 0;
   transition-duration: 0.45s;
+  z-index: 9999;
+}
+
+
+.center_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#address {
+  text-align: left;
+}
+
+#mail {
+  text-align: right;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -241,7 +263,7 @@ footer {
     z-index: 10;
     margin: 0;
     padding: 5em;
-    top: -100vh;
+    top: -200vh;
   }
 
   #offers {
@@ -261,5 +283,40 @@ footer {
 
   .section {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+
+  body { font-size: 90%; }
+  h1 { font-size: 3em; }
+  h2 { font-size: 2.5em; }
+  h3 { font-size: 2em; }
+  h4 { font-size: 1.5em; }
+  
+  .stacked {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .stack_spacing {
+    margin-top: 5em;
+  }
+
+  #address {
+    text-align: center;
+  }
+  
+  #mail {
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  .gallery_item {
+    height: 60em;
+  }
+
+  .stacked_img {
+    height: 30em;
   }
 }

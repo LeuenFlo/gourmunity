@@ -35,18 +35,14 @@
 </header>
 <main id="title">
   <div class="section">
-    <h1>Willkommen bei Gourmunity</h1>
-    <p>
-      Wir verbinden Leidenschaft für exzellente Küche mit erstklassigem Service, um Ihre Veranstaltung
-      – sei es eine Geburtstagsfeier, ein Firmenevent, eine Hochzeit oder ein familiäres Beisammensein
-      – zu einem wahrhaftigen Genusserlebnis zu machen.  
-    </p>
+    <h1>Gourmunity</h1>
+    <h3>Catering</h3>
   </div>
 </main>
 <main id="intro">
   <div class="section blured">
     <div>
-      <h2>Über Gourmunity</h2>
+      <h2>Über uns</h2>
     </div>
     <div>
       Anfang 2024 wurde ich durch meine Leidenschaft fürs gemeinsame Essen mit Freunden inspiriert, meinen eigenen Cateringservice zu gründen.
@@ -68,14 +64,15 @@
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
+    
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
         <div class="gallery_item row">
-          <div class="col">
+          <div class="col stacked stacked_img">
             <img src="carousel_img/frelechoz.jpeg">
           </div>
-          <div class="col">
+          <div class="col stacked">
             <h3>Super Service</h3>
             <p>
               Mir kommen die folgenden Worte in den Sinn:
@@ -95,10 +92,10 @@
 
       <div class="item">
         <div class="gallery_item row">
-          <div class="col">
+          <div class="col stacked stacked_img">
             <img src="carousel_img/a.g.jpeg">
           </div>
-          <div class="col">
+          <div class="col stacked">
             <h3>Hammer Food!</h3>
             <p>
               Guten Tag Herr Bracher, Hier meinen Beitrag: „Sehr gutes und vielseitiges Angebot an Warm- und Kaltspeisen. Freundlicher und zuverlässiger Service. Es bereitet Freude, sich am Buffet bedienen zu können. Beste Empfehlung!
@@ -110,10 +107,10 @@
     
       <div class="item">
         <div class="gallery_item row">
-          <div class="col">
+          <div class="col stacked stacked_img">
             <img src="carousel_img/alclic.jpeg">
           </div>
-          <div class="col">
+          <div class="col stacked">
             <h3>Perfektes Catering</h3>
             <p>
               Gourmunity übernahm das Catering für unser Firmen-Weihnachtsessen 2023 für ca. 50 Personen.
@@ -143,12 +140,15 @@
 <main id="about">
 <div class="section">
   <div class="row">
-    <div class="col" style="text-align: left; padding-top: 8em;">
-      <h2>Über mich</h2>
-      <p>
-        Mein Name ist Patrice, ich komme ursprünglich aus Grosshöchstetten im Kanton Bern und habe Anfang 2024 meine eigene Cateringfirma gegründet. Die Leidenschaft für das Kochen habe ich von meinem Vater übernommen. Schon immer habe ich gerne für meine Freunde gekocht und bin fest davon überzeugt, dass Freundschaften am Besten durch gutes Essen gepflegt werden! Mit Gourmunity möchte ich genau das weitergeben – gutes Essen, das Menschen verbindet. Unser Catering steht für Genuss in bester Gesellschaft.      </p>
+    <div class="col center_content stacked" style="text-align: left;">
+      <div>
+        <h2>Über mich</h2>
+        <p>
+          Mein Name ist Patrice, ich komme ursprünglich aus Grosshöchstetten im Kanton Bern und habe Anfang 2024 meine eigene Cateringfirma gegründet. Die Leidenschaft für das Kochen habe ich von meinem Vater übernommen. Schon immer habe ich gerne für meine Freunde gekocht und bin fest davon überzeugt, dass Freundschaften am Besten durch gutes Essen gepflegt werden! Mit Gourmunity möchte ich genau das weitergeben – gutes Essen, das Menschen verbindet. Unser Catering steht für Genuss in bester Gesellschaft.
+        </p>
+      </div>
     </div>
-    <div class="col">
+    <div class="col center_content stacked stack_spacing">
       <img class="col" style="width: 90%;" src="images/portrait_1.jpg">
     </div>
   </div>
@@ -159,7 +159,7 @@
 <main id="contact">
   <div class="section blured">
       <h2>Kontaktiere mich</h2>
-      <form id="contact-form" action="mailto:example@example.com" accept-charset="UTF-8" method="post" enctype="text/plain" style="width: 50em; text-align: center;">
+      <form id="contact-form" action="mailto:example@example.com" accept-charset="UTF-8" method="post" enctype="text/plain">
         <input placeholder="Name" type="text" id="from_name" name="from_name" required>
         <input placeholder="Email" type="email" id="email" name="email" required>
         <textarea placeholder="Deine Nachricht..." id="message" name="message" rows="4" required></textarea>
@@ -171,11 +171,11 @@
 <footer>
 <div class="section">
 <div class="row">
-  <div class="col" style="text-align: left;">
+  <div class="col stacked" id="address">
     <strong>Adresse</strong>
     <p>3506 Grosshöchstetten <br> Lindenackerweg 9</p>
   </div>
-  <div class="col" style="text-align: right;">
+  <div class="col stacked" id="mail">
     <strong>Kontakt</strong>
     <p>+41 79 852 59 30 <br> gourmunity.catering@gmail.com</p>
   </div>
@@ -184,10 +184,10 @@
 <div class="customContainer">
   <div id="social_media" class="customContainer">
     <div class="row">
-      <a class="col-md-6" target="_blank" href="https://www.instagram.com/gourmunity/">
+      <a class="col" target="_blank" href="https://www.instagram.com/gourmunity/">
         <img src="social_media/insta.svg">
       </a>
-      <a class="col-md-6" target="_blank" href="https://wa.me/+41798525930">
+      <a class="col" target="_blank" href="https://wa.me/+41798525930">
         <img src="social_media/whatsapp.svg">
       </a>
     </div>
