@@ -1,22 +1,16 @@
-<main id="reviews">
+<section id="reviews" class="reviews-section">
   <div class="container">
-    <h2>Rezensionen</h2>  
-    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-
-      <!-- Slides -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="review-card">
+    <h2>Rezensionen</h2>
+    
+    <div class="testimonials-carousel" #carousel>
+      <div class="carousel-container" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="review-content">
             <div class="review-image">
               <img src="assets/images/frelechoz.jpeg" alt="Dominique Emery Freléchoz">
             </div>
-            <div class="review-content">
+            <div class="review-text">
               <h3>Super Service</h3>
               <p>
                 Mir kommen die folgenden Worte in den Sinn:
@@ -29,12 +23,13 @@
           </div>
         </div>
 
-        <div class="carousel-item">
-          <div class="review-card">
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="review-content">
             <div class="review-image">
               <img src="assets/images/a.g.jpeg" alt="A.G.">
             </div>
-            <div class="review-content">
+            <div class="review-text">
               <h3>Hammer Food!</h3>
               <p>
                 Sehr gutes und vielseitiges Angebot an Warm- und Kaltspeisen. Freundlicher und zuverlässiger Service.
@@ -45,12 +40,13 @@
           </div>
         </div>
 
-        <div class="carousel-item">
-          <div class="review-card">
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="review-content">
             <div class="review-image">
               <img src="assets/images/alclic.jpeg" alt="Alclic">
             </div>
-            <div class="review-content">
+            <div class="review-text">
               <h3>Perfektes Catering</h3>
               <p>
                 Gourmunity übernahm das Catering für unser Firmen-Weihnachtsessen 2023 für ca. 50 Personen.
@@ -63,15 +59,23 @@
         </div>
       </div>
 
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      <!-- Navigation Dots -->
+      <div class="carousel-dots">
+        <button 
+          *ngFor="let dot of [0, 1, 2]; let i = index" 
+          class="dot" 
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)">
+        </button>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="carousel-arrow prev" (click)="prevSlide()">
+        <i class="fas fa-chevron-left"></i>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+      <button class="carousel-arrow next" (click)="nextSlide()">
+        <i class="fas fa-chevron-right"></i>
       </button>
     </div>
   </div>
-</main>
+</section>

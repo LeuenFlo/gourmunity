@@ -1,4 +1,8 @@
-<header>
+<header [class.scrolled]="isScrolled">
+  <div class="scroll-progress">
+    <div class="progress-bar" [style.width.%]="scrollProgress"></div>
+  </div>
+  
   <nav>
     <div class="logo">
       <a href="#home">Gourmunity</a>

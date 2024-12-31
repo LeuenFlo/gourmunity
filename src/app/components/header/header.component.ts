@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isNavOpen = false;
+  isScrolled = false;
+  scrollProgress = 0;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Für den scrolled Status
+    this.isScrolled = window.scrollY > 50;
+
+    // Für die Scroll-Progress-Bar
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    this.scrollProgress = (window.scrollY / windowHeight) * 100;
+  }
 
   toggleNav(): void {
     this.isNavOpen = !this.isNavOpen;

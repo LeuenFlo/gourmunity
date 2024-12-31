@@ -1,3 +1,5 @@
+@use "sass:color";
+
 main {
   min-height: 100vh;
   padding: 6rem 2rem;
@@ -79,7 +81,7 @@ button {
   margin-top: 1rem;
 
   &:hover:not(:disabled) {
-    background-color: darken(#c3b5a7, 5%);
+    background-color: color.adjust(#c3b5a7, $lightness: -5%);
   }
 
   &:disabled {
