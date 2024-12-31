@@ -1,0 +1,156 @@
+@use "sass:color";
+
+.menu-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+.menu-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.menu-category {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .examples {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.4;
+
+      &:before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #c3b5a7;
+        font-size: 1.2rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.menu-note {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+
+  p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #c3b5a7;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: color.adjust(#c3b5a7, $lightness: -10%);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 4rem 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .section-description {
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .menu-categories {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .menu-category {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+} 

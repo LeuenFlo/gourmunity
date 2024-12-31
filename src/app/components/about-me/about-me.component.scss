@@ -1,9 +1,9 @@
-main {
+.about-section {
   padding: 6rem 2rem;
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 
-.section {
+.container {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -46,7 +46,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  main {
+  .about-section {
     padding: 4rem 1rem;
   }
   

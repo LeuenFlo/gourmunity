@@ -5,6 +5,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     HeaderComponent,
     HomeComponent,
+    MenuComponent,
     ReviewsComponent,
     AboutMeComponent,
     ContactComponent,

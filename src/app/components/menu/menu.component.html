@@ -1,0 +1,27 @@
+<section class="menu-section" id="menu">
+  <div class="container">
+    <h2>Unsere Angebote</h2>
+    <p class="section-description">
+      Entdecken Sie unsere vielfältigen Catering-Optionen für jeden Anlass.
+      Jedes Angebot wird individuell nach Ihren Wünschen und Budget gestaltet.
+    </p>
+
+    <div class="menu-categories">
+      <div *ngFor="let category of menuCategories" class="menu-category">
+        <h3>{{ category.title }}</h3>
+        <p class="description">{{ category.description }}</p>
+        <ul class="examples">
+          <li *ngFor="let example of category.examples">{{ example }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-note">
+      <p>
+        Kontaktieren Sie uns für ein individuelles Angebot. 
+        Wir beraten Sie gerne und erstellen eine massgeschneiderte Offerte für Ihren Anlass.
+      </p>
+      <a href="#contact" class="cta-button">Jetzt anfragen</a>
+    </div>
+  </div>
+</section> 
