@@ -36,7 +36,7 @@ def main():
             print(f"Warning: Could not clean dist directory: {e}")
 
     print("🏗️  Building the application...")
-    build_command = 'ng build --configuration production --base-href "/gourmunity/"'
+    build_command = 'ng build --configuration production --base-href "/"'
     
     if run_command(build_command):
         print("✅ Build successful!")
