@@ -40,7 +40,7 @@ export class MenuComponent {
     },
     {
       title: 'Events & Feiern',
-      description: 'Maßgeschneiderte Lösungen für Ihren Anlass',
+      description: 'Massgeschneiderte Lösungen für Ihren Anlass',
       examples: [
         'Hochzeiten und Familienfeiern',
         'Firmenevents und Geschäftsanlässe',
