@@ -42,4 +42,7 @@ testem.log
 Thumbs.db
 
 # Old project files
-/gourmunity_old
+./gourmunity_old
+
+# Unused assets
+./src/assets/images/unused
