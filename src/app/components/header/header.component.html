@@ -1,0 +1,21 @@
+<header>
+  <nav>
+    <div class="logo">
+      <a href="#home" (click)="scrollToTop(); $event.preventDefault()">
+        <img src="assets/images/gm_logo.jpg" alt="Gourmunity Logo">
+        <span>Gourmunity</span>
+      </a>
+    </div>
+
+    <button class="menu-btn" [class.active]="isMenuOpen" (click)="toggleMenu()">
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li><a href="#menu" (click)="scrollToSection('#menu'); $event.preventDefault()">Angebote</a></li>
+      <li><a href="#reviews" (click)="scrollToSection('#reviews'); $event.preventDefault()">Rezensionen</a></li>
+      <li><a href="#about-me" (click)="scrollToSection('#about-me'); $event.preventDefault()">Über mich</a></li>
+      <li><a href="#contact" (click)="scrollToSection('#contact'); $event.preventDefault()">Kontakt</a></li>
+    </ul>
+  </nav>
+</header> 
