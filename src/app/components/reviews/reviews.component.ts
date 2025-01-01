@@ -1,8 +1,6 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { register } from 'swiper/element/bundle';
-
-register();
+import { FadeInDirective } from '../../directives/fade-in.directive';
 
 interface Review {
   image: string;
@@ -13,12 +11,11 @@ interface Review {
 @Component({
   selector: 'app-reviews',
   standalone: true,
-  imports: [CommonModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [CommonModule, FadeInDirective],
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.scss']
 })
-export class ReviewsComponent implements OnInit, AfterViewInit {
+export class ReviewsComponent implements OnInit {
   reviews: Review[] = [
     {
       image: 'assets/images/frelechoz.jpeg',
@@ -37,29 +34,7 @@ export class ReviewsComponent implements OnInit, AfterViewInit {
     }
   ];
 
-  ngOnInit() {
-    // Initialisierung wird in ngAfterViewInit durchgeführt
-  }
+  constructor() { }
 
-  ngAfterViewInit() {
-    const swiperEl = document.querySelector('swiper-container');
-    if (swiperEl) {
-      Object.assign(swiperEl, {
-        injectStyles: [
-          `
-          .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            background: #c3b5a7;
-            opacity: 0.5;
-          }
-          .swiper-pagination-bullet-active {
-            opacity: 1;
-          }
-          `
-        ],
-      });
-      swiperEl.initialize();
-    }
-  }
+  ngOnInit(): void { }
 }

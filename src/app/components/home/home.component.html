@@ -1,45 +1,23 @@
 <main>
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-content">
       <h1>Gourmunity</h1>
       <p class="subtitle">Catering mit Leidenschaft und Persönlichkeit</p>
       <div class="cta-buttons">
-        <a href="#contact" class="cta-primary">Jetzt anfragen</a>
-        <a href="#features" class="cta-secondary">Mehr erfahren</a>
+        <a href="#contact" (click)="scrollTo('#contact', $event)" class="cta-primary">Jetzt anfragen</a>
+        <a href="#about-preview" (click)="scrollTo('#about-preview', $event)" class="cta-secondary">Mehr erfahren</a>
       </div>
     </div>
   </section>
 
-  <section class="features" id="features">
-    <div class="container">
-      <div class="feature-grid">
-        <div class="feature-card">
-          <i class="fas fa-utensils"></i>
-          <h3>Individuelles Catering</h3>
-          <p>Maßgeschneiderte Menüs für Ihren besonderen Anlass</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-users"></i>
-          <h3>Für jeden Anlass</h3>
-          <p>Von intimen Dinner-Partys bis zu großen Events</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-leaf"></i>
-          <h3>Frische Zutaten</h3>
-          <p>Saisonale und regionale Produkte</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-preview">
+  <section class="about-preview" id="about-preview">
     <div class="container">
       <div class="content-wrapper">
         <div class="text-content">
           <h2>Willkommen bei Gourmunity</h2>
           <p>Entdecken Sie die Kunst des Caterings, wo jedes Gericht eine Geschichte erzählt und jeder Anlass zu einem unvergesslichen Erlebnis wird.</p>
           <p>Mit Liebe zum Detail und Leidenschaft für außergewöhnliche Geschmackserlebnisse mache ich Ihre Veranstaltung zu etwas Besonderem.</p>
-          <a href="#about-me" class="learn-more">Mehr über mich erfahren <i class="fas fa-arrow-right"></i></a>
+          <a href="#about-me" (click)="scrollTo('#about-me', $event)" class="learn-more">Mehr über mich erfahren <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="image-content">
           <img src="assets/images/img_2.jpg" alt="Gourmunity Catering Impression" class="about-image">

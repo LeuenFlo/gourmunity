@@ -1,0 +1,19 @@
+// Alternating section backgrounds
+section {
+  &:nth-of-type(odd) {
+    background-color: #f8f9fa;  // Light gray for odd sections
+  }
+  
+  &:nth-of-type(even) {
+    background-color: white;    // White for even sections
+  }
+}
+
+// Ensure consistent vertical spacing between sections
+section {
+  padding: 4rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+}
